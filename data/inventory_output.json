@@ -1,0 +1,13 @@
+[ {
+  "item" : "Rice",
+  "totalWeight" : 17,
+  "totalPrice" : 1170
+}, {
+  "item" : "Pulse",
+  "totalWeight" : 23,
+  "totalPrice" : 1195
+}, {
+  "item" : "Wheat",
+  "totalWeight" : 5,
+  "totalPrice" : 225
+} ]

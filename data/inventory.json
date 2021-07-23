@@ -1,0 +1,38 @@
+{
+	"rice": [
+		{
+			"pricePerKg": 60,
+			"name": "basmati",
+			"weight": 7
+		},
+		{
+			"pricePerKg": 75,
+			"name": "brown",
+			"weight": 10
+		}
+	],
+	"wheats": [
+		{
+			"pricePerKg": 45,
+			"name": "chakki_fresh",
+			"weight": 5
+		}
+	],
+	"pulses": [
+		{
+			"pricePerKg": 65,
+			"name": "greens",
+			"weight": 3
+		},
+		{
+			"pricePerKg": 50,
+			"name": "rajma",
+			"weight": 10
+		},
+		{
+			"pricePerKg": 50,
+			"name": "munga_beans",
+			"weight": 10
+		}
+	]
+}
