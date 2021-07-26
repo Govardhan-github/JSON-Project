@@ -21,7 +21,7 @@ public class stockManagement {
 
 		}
 		private static void getInputFromUser(){
-		System.out.println("Which operation do you want to perform ?\n1.Add Stock \n2.Print stock report \n3.Exit");
+		System.out.println("Which operation you want to perform ?\n1.Add Stock \n2.Print stock report \n3.Exit");
 		int ch = sc.nextInt();
 		switch (ch){
 		case 1:
@@ -40,12 +40,12 @@ public class stockManagement {
 		}
 
 		public static void printStock() {
-		System.out.println("***** print stock *******");
+		System.out.println(" print stock ");
 		JSONParser jsonParser = new JSONParser();
 		try {
 		JSONArray jsonArray = (JSONArray) jsonParser.parse(new FileReader("src/data/stock.json"));
 		for (int i =0; i < jsonArray.size();i++){
-		System.out.printf("******** Stock %s ********\n",i+1);
+		System.out.printf(" Stock %s \n",i+1);
 		JSONObject obj = (JSONObject) jsonArray.get(i);
 		String name = (String) obj.get("name");
 		long shares = (long) obj.get("no_of_shares");
@@ -66,7 +66,7 @@ public class stockManagement {
 		}
 
 		public static void addStock() {
-		System.out.println("******* Add stock *******");
+		System.out.println(" Add stock ");
 		Scanner sc = new Scanner(System.in);
 		System.out.println("Enter Stock Name : ");
 		String stockName = sc.nextLine();
