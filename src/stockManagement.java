@@ -12,18 +12,28 @@
 
 public class stockManagement {
 		
+	/*
+	 * Program For Stock Management
+	 * Ask User To Add Stock And Print Stock
+	 */
 		public static Scanner sc = new Scanner(System.in);
 		public static JSONArray stockList = new JSONArray();
-
+		/*
+		 * Declaring Main Method Here
+		 * Calling GetInputFromUser Method
+		 */
 		public static void main(String[] args) {
-		System.out.println("********* Stock Management *********");
+		System.out.println("Stock Management ");
 		getInputFromUser();
 
 		}
+		/*
+		 * Declaring Get Input From User Method
+		 */
 		private static void getInputFromUser(){
 		System.out.println("Which operation you want to perform ?\n1.Add Stock \n2.Print stock report \n3.Exit");
-		int ch = sc.nextInt();
-		switch (ch){
+		int op = sc.nextInt();
+		switch (op){
 		case 1:
 		addStock();
 		break;
@@ -38,7 +48,10 @@ public class stockManagement {
 		break;
 		}
 		}
-
+		/*
+		 * Declaring Print Stock Method
+		 * 
+		 */
 		public static void printStock() {
 		System.out.println(" print stock ");
 		JSONParser jsonParser = new JSONParser();
@@ -64,7 +77,9 @@ public class stockManagement {
 		}
 		getInputFromUser();
 		}
-
+		/*
+		 * Declaring Add Stock Method To Add The Shares And Price Of Shares
+		 */
 		public static void addStock() {
 		System.out.println(" Add stock ");
 		Scanner sc = new Scanner(System.in);
@@ -75,10 +90,10 @@ public class stockManagement {
 		System.out.println("Enter share price: ");
 		double sharePrice = sc.nextDouble();
 		JSONObject jsonObject = new JSONObject();
-		jsonObject.put("name", stockName); // Assiging the accepted value to the JSON Object
+		jsonObject.put("name", stockName); 
 		jsonObject.put("no_of_shares", noOfShares);
 		jsonObject.put("price", sharePrice);
-		stockList.add(jsonObject); // Adding the JSON Object into the JSON Array..
+		stockList.add(jsonObject); 
 		try {
 		FileWriter file = new FileWriter("src/data/stock.json");
 		file.write(stockList.toJSONString());
